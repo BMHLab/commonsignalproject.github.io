@@ -50,6 +50,15 @@ h2 {
 }
 
 
+#canvasWrapper {
+    margin: 0 auto; /* setting top and bottom margin to 0 and right and left margin to 200px */
+    background-color:white;
+        /* border-radius: 10px; */
+        position: relative;
+        min-width: 300px;
+        max-width: 300px;
+}
+
 #content {
     margin: 0 auto; /* setting top and bottom margin to 0 and right and left margin to 200px */
     background-color:white;
