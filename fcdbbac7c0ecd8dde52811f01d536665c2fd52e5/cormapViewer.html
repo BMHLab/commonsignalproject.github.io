@@ -46,7 +46,8 @@
 
 
       function init() {
-        camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 1e10 );
+        // camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 1e10 );
+        camera = new THREE.PerspectiveCamera( 60, 1, 0.01, 1e10 );
         camera.position.z = 100;
         controls = new THREE.TrackballControls( camera );
         controls.rotateSpeed = 5.0;
@@ -73,8 +74,9 @@
         // renderer
         renderer = new THREE.WebGLRenderer();
         renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setSize( window.innerWidth/4, window.innerHeight/4 );
-        // renderer.setSize( 500, 500);
+        // renderer.setSize( window.innerWidth/4, window.innerHeight/4 );
+        // renderer.setSize( 500, 500*window.innerHeight/window.innerWidth);
+        renderer.setSize( 500, 500);
         // container = document.createElement( 'div' );
         // container = document.getElementById("content");
 
@@ -98,6 +100,7 @@
         // renderer.setSize( window.innerWidth, window.innerHeight );
         // controls.handleResize();
         // check();
+        // renderer.setSize( window.innerWidth/4, window.innerHeight/4 );
       }
 
 
